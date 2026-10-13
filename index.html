@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1926">
+<meta name="description" content="Independent educational AirAsia Group (AAGB 5238) quarterly cash-flow sensitivity model: jet fuel price, revenue, lease payments, financing costs and capital investment.">
+<meta property="og:title" content="AirAsia Quarterly Cash-Flow Stress Lab">
+<meta property="og:description" content="Explore fuel price and quarterly revenue scenarios, cash requirements and the cash-flow break-even thresholds. Independent educational model.">
+<title>AirAsia Quarterly Cash-Flow Stress Lab</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;--bg:#081522;--panel:#122436;--panel2:#172c3d;--line:#2c4353;--text:#edf5f7;--sub:#aac0cd;--teal:#4dd5c8;--gold:#edbd70;--red:#ff7888;--green:#63e4b3}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0,#173949 0,transparent 44%),var(--bg);color:var(--text);line-height:1.48}main{max-width:1080px;margin:auto;padding:24px 20px 90px}a{color:var(--teal)}button{cursor:pointer}header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;padding:20px 0 24px}h1{font-size:clamp(1.8rem,4vw,3.2rem);letter-spacing:-.04em;line-height:1.09;margin:10px 0}h2{font-size:1.14rem;margin:0 0 16px}h3{font-size:1rem;margin:14px 0 8px}.eyebrow{font-size:.76rem;font-weight:760;letter-spacing:.13em;text-transform:uppercase;color:var(--teal)}.lede{color:var(--sub);max-width:660px;margin:9px 0}.pill{font-size:.76rem;padding:8px 12px;border-radius:22px;border:1px solid #3a6472;background:#174454;color:#e3faf5;font-weight:700;white-space:nowrap}.panel{background:rgba(18,36,54,.95);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 8px 36px #0002}.layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.controls{display:grid;gap:20px}.slidertop{display:flex;justify-content:space-between;align-items:center;gap:12px}label{font-weight:750}.number{font-size:1.7rem;letter-spacing:-.035em;font-weight:780;white-space:nowrap}.highlight{color:var(--teal)}.gold{color:var(--gold)}input[type=range]{appearance:none;-webkit-appearance:none;width:100%;height:13px;background:linear-gradient(90deg,var(--teal) var(--progress,50%),#344f60 var(--progress,50%));border-radius:99px;cursor:pointer;margin:20px 0 12px}input[type=range]::-webkit-slider-thumb{appearance:none;width:27px;height:27px;border-radius:100%;background:#f4f9fa;border:5px solid var(--teal);box-shadow:0 0 0 3px #4dd5c840}input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#f4f9fa;border:5px solid var(--teal)}.smallrow{display:flex;justify-content:space-between;gap:12px;color:var(--sub);font-size:.76rem}.muted{color:var(--sub);font-size:.86rem}.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.kpi{padding:19px;border:1px solid var(--line);border-radius:16px;background:#152b3c}.kpi .label{color:var(--sub);font-size:.78rem;margin-bottom:8px}.kpi .value{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;letter-spacing:-.045em;line-height:1.2}.kpi .desc{color:var(--sub);font-size:.75rem;margin-top:7px}.key{grid-column:1/-1;background:linear-gradient(120deg,#162e43,#12343b)}.key .value{font-size:clamp(2.25rem,5vw,3.2rem)}.status{display:inline-block;font-size:.74rem;font-weight:700;border-radius:6px;margin-top:9px;padding:3px 9px;background:#4dd5c822;color:var(--green)}.status.negative{background:#ff788821;color:var(--red)}.full{grid-column:1/-1}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{text-align:left;border-bottom:1px solid #2c4353;padding:10px 4px}td:last-child,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}tr.major{font-weight:750;background:#183345}tr.outcome td{font-size:1.15rem;color:var(--teal);font-weight:850}.neg{color:var(--red)!important}.pos{color:var(--green)!important}.buttonrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}button{border:1px solid #4c7080;background:#1c3a4b;color:#ecf9fa;border-radius:11px;padding:11px 15px;font-weight:750;font-size:.85rem}button:hover,button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}.chartbox{position:relative;margin-top:6px}svg{width:100%;height:auto;display:block}svg text{fill:#aec5d0;font-size:12px}svg .gridline{stroke:#325267;stroke-width:1}svg .zero{stroke:#edf5f7;stroke-dasharray:5 5;stroke-width:1.2}svg .path{stroke:#4dd5c8;fill:none;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}svg .point{fill:#edbd70;stroke:#081522;stroke-width:3}code{color:#d5f6ea;background:#0b2633;border-radius:5px;padding:2px 6px;overflow-wrap:anywhere}details{border:1px solid var(--line);padding:12px 15px;border-radius:11px;background:#112637;margin:10px 0}summary{font-weight:750;cursor:pointer}details p,details li{font-size:.89rem;color:#cee0e7}details ul{padding-left:22px}footer{margin-top:22px;color:var(--sub);font-size:.75rem}.note{border-left:3px solid var(--gold);padding-left:13px;color:#c6d7e2;font-size:.84rem;margin:15px 0 0}.baseinfo{padding:8px 11px;background:#183347;border-radius:10px;margin-top:12px;font-size:.81rem;color:#c5e4e4}.separator{border-top:1px solid var(--line);margin:20px 0}.inlinebadge{color:var(--gold);font-size:.8rem;font-weight:700}#shareStatus{color:var(--green);font-size:.8rem;min-height:18px;margin-top:6px}@media(max-width:760px){main{padding:12px 13px 70px}.layout{grid-template-columns:1fr}.full,.key{grid-column:auto}.panel{padding:16px}.kpi{padding:14px}.kpis{gap:10px}.number{font-size:1.45rem}header{padding:14px 1px 20px}h1{font-size:2rem}.kpi .value{font-size:1.5rem}.key .value{font-size:2.5rem}td{padding:10px 5px}}
+</style>
+</head>
+<body><main>
+<header>
+<div><div class="eyebrow">Independent equity research · Bursa 5238</div><h1>AirAsia Cash-Flow<br>Stress Lab</h1><p class="lede">How much jet fuel cost can AirAsia afford? Adjust quarterly revenue and fuel prices to see the estimated cash remaining <strong>after operating expenses, leases, cash interest, debt principal and sustaining investment</strong>.</p></div>
+<div class="pill">Q2 2026 baseline</div>
+</header>
+<section class="layout" aria-label="Interactive cash flow model">
+<div class="panel controls">
+<div><h2>Change your assumptions</h2><p class="muted">Moving revenue adjusts assumed flight activity, fuel consumption and variable operating costs together.</p></div>
+<div><div class="slidertop"><label for="fuel">1. Jet fuel price</label><div class="number highlight" id="fuelValue">US$183/bbl</div></div><input id="fuel" aria-label="Jet fuel price USD per barrel" type="range" min="20" max="220" step="1" value="183"><div class="smallrow"><span>US$20</span><span>Q2: US$183</span><span>US$220</span></div></div>
+<div><div class="slidertop"><label for="revenue">2. Quarterly revenue</label><div class="number gold" id="revenueValue">RM5.10B</div></div><input id="revenue" aria-label="Quarterly revenue RM billion" type="range" min="2" max="8" step="0.05" value="5.1"><div class="smallrow"><span>RM2B</span><span>Q2: RM5.09B</span><span>RM8B</span></div></div>
+<div class="baseinfo" role="status" aria-live="polite"><span id="flightFactor">100.3%</span> estimated baseline flight activity · <span id="fuelBill">RM2.80B</span> modeled fuel expense</div>
+<div class="buttonrow"><button id="reset" type="button">↺ Reset baseline</button><button id="share" type="button">↗ Copy scenario link</button></div><div id="shareStatus" aria-live="polite"></div>
+<p class="note">Fuel consumption follows revenue only as an <strong>illustrative flight-volume proxy</strong>. Real ticket yields, exchange rates, hedging and aircraft utilization can differ.</p>
+</div>
+<div class="panel"><h2>Quarterly scenario result</h2><div class="kpis">
+<div class="kpi key"><div class="label">Estimated cash after modeled payments</div><div class="value" id="netCash">−RM1,044M</div><div class="status negative" id="status">Cash shortfall</div></div>
+<div class="kpi"><div class="label">Break-even jet fuel price</div><div class="value" id="breakFuel">US$115</div><div class="desc">Ceiling at selected revenue and normal debt repayments</div></div>
+<div class="kpi"><div class="label">Break-even quarterly revenue</div><div class="value" id="breakRevenue">RM8.89B</div><div class="desc">At selected fuel price; may exceed slider range</div></div>
+<div class="kpi"><div class="label">EBITDA estimate</div><div class="value" id="ebitda">RM447M</div></div>
+<div class="kpi"><div class="label">Cash if debt principal refinanced</div><div class="value" id="refinanced">−RM445M</div><div class="desc" id="refinancedFuel">Fuel ceiling: US$154/bbl</div></div>
+</div></div>
+<div class="panel full"><h2>Cash flow versus jet fuel price</h2><p class="muted">For the selected quarterly revenue, this curve shows the effect of different fuel prices on cash remaining after modeled payments. The white dashed line marks zero cash flow.</p><div class="chartbox"><svg id="plot" role="img" aria-label="Projected cash flow versus jet fuel price" viewBox="0 0 900 300"></svg></div></div>
+<div class="panel full"><h2>How the quarterly cash bridge is calculated</h2><div class="tablewrap"><table><thead><tr><th>Item</th><th>RM million</th></tr></thead><tbody>
+<tr><td>Revenue</td><td id="tRev"></td></tr><tr><td>Fuel expense (volume × price)</td><td id="tFuel"></td></tr><tr><td>Staff expenses</td><td id="tStaff"></td></tr><tr><td>Aircraft maintenance & overhaul (operating cost)</td><td id="tMaintenance"></td></tr><tr><td>Airport / user charges</td><td id="tAirport"></td></tr><tr><td>Aircraft operating lease expense</td><td id="tOpLease"></td></tr><tr><td>Other operating expenses</td><td id="tOther"></td></tr><tr><td>Other operating income (+)</td><td id="tOtherIncome"></td></tr><tr class="major"><td>EBITDA, modeled</td><td id="tEBITDA"></td></tr>
+<tr><td>Cash interest</td><td id="tInterest"></td></tr><tr><td>Aircraft lease liability repayments</td><td id="tLeases"></td></tr><tr><td>Bank / debenture principal repayments</td><td id="tPrincipal"></td></tr><tr><td>Cash taxes</td><td id="tTax"></td></tr><tr><td>Sustaining capex (assumed)</td><td id="tCapex"></td></tr><tr class="outcome"><td>Modeled net cash flow</td><td id="tNet"></td></tr>
+</tbody></table></div><p class="note">Airline operating maintenance expense is <strong>already included</strong> above EBITDA; it is not deducted twice. But exceptional cash settlements of historic maintenance provisions are <strong>not separately included</strong>.</p></div>
+<div class="panel full"><h2>Model methodology and limitations</h2>
+<details open><summary>Actual reported base figures — Q2 2026</summary><p>Quarterly revenue RM5,085.584M; fuel expense RM2,796.020M at reported average jet fuel price US$183/bbl; staff RM563.000M; aircraft maintenance and overhaul RM537.342M; airport/user charges RM506.509M; operating lease expense RM19.873M; other expenses RM269.503M; other income RM49.252M. These reproduce the reported EBITDA of RM442.589M.</p><p>Source: <a href="https://investor.airasiagroup.com/newsroom/2026_Q2_Aviation_Group_Financial_Statements_13082026.pdf" rel="noopener noreferrer" target="_blank">AirAsia Group Q2 2026 interim financial statements</a> and associated Q2 results.</p></details>
+<details><summary>Which costs automatically change with revenue?</summary><ul><li><strong>Fuel:</strong> 100% of consumption proportional to the revenue/volume proxy; barrel price applied independently.</li><li><strong>Airport/user charges:</strong> 100% variable.</li><li><strong>Maintenance expense:</strong> 30% variable, 70% fixed.</li><li><strong>Staff expense:</strong> 20% variable, 80% fixed.</li><li><strong>Other operating expenses:</strong> 40% variable, 60% fixed.</li><li><strong>Operating lease expense and other income:</strong> fixed.</li></ul><p>These behavior percentages are analyst assumptions, <strong>not</strong> company disclosures. A lower ticket price could reduce revenue without reducing flight activity or fuel burn.</p></details>
+<details><summary>Cash financing costs and investment allowance</summary><p>Quarterly proxy = one half of 1H 2026 reported cash items: interest RM254.894M / 2 = RM127.447M; lease liability repayments RM1,207.371M / 2 = RM603.686M; bank/debenture principal repayments (RM1,050.152M + RM147.170M) / 2 = RM598.661M; income taxes RM20.558M / 2 = RM10.279M. Sustaining capex is an <strong>assumed</strong> RM150M per quarter.</p><p>Historical financing repayments are not a debt-maturity schedule. The separate refinancing comparison removes the modeled principal repayment but retains interest, leases and capex. It assumes equivalent refinancing cash is available, not loan forgiveness.</p></details>
+<details><summary>Break-even formulas</summary><p>Volume factor = Selected revenue / RM5.085584B.</p><p>Fuel expense (RM B) = 2.796020 × (fuel price / 183) × volume factor.</p><p>Non-fuel operating expenses are calculated using the fixed/variable percentages above. EBITDA = revenue − fuel − non-fuel opex + other income.</p><p>Modeled net cash = EBITDA − cash interest − lease liability repayments − bank/debenture principal repayments − taxes − assumed capex.</p><p>Break-even fuel price solves modeled net cash = 0 at selected revenue. Minimum break-even revenue solves the same equation at selected barrel price, assuming revenue change corresponds to proportional flight activity. If contribution per extra RM of revenue is non-positive, revenue growth cannot create break-even within this simplified volume model.</p></details>
+<details><summary>Not covered — material risk of overstating cash flow</summary><ul><li>Extraordinary settlement of existing aircraft maintenance provisions or overdue payables.</li><li>Large aircraft deposits, purchase commitments, fleet additions and capex beyond RM150M per quarter.</li><li>Working-capital changes (advance ticket sales, supplier payments and collections).</li><li>Changing ticket yield, cabin occupancy, route mix, fuel efficiency or fleet composition.</li><li>Jet fuel hedges, realized fuel prices, currency fluctuations and financing-rate changes.</li><li>Future debt maturities, creditor concessions and new share issuance.</li></ul><p>The output is a <strong>scenario sensitivity</strong>, not reported Q2 free cash flow, verified solvency, an investment recommendation or a forecast.</p></details>
+</div></section>
+<footer>Independent educational model based on reported Q2 / 1H 2026 figures and explicitly stated assumptions. No connection to or endorsement by AirAsia Group Berhad or Moomoo. Financial statements remain the authoritative source. This calculator runs locally in your browser and makes no API calls.</footer>
+</main>
+<script>
+(() => {
+'use strict';
+const BASE={revenue:5.085584,fuel:2.796020,fuelUSD:183,staff:.563,maintenance:.537342,airport:.506509,operatingLease:.019873,other:.269503,otherIncome:.049252};
+const CASH={interest:.254894/2,lease:1.207371/2,principal:(1.050152+.147170)/2,tax:.020558/2,capex:.15};
+const $=id=>document.getElementById(id);
+const fixed=BASE.staff*.8+BASE.maintenance*.7+BASE.operatingLease+BASE.other*.6-BASE.otherIncome;
+const variable=BASE.staff*.2+BASE.maintenance*.3+BASE.airport+BASE.other*.4;
+const obligation=Object.values(CASH).reduce((a,b)=>a+b,0);
+function calc(price,revenue){
+ const factor=revenue/BASE.revenue;
+ const fuel=BASE.fuel*price/BASE.fuelUSD*factor;
+ const staff=BASE.staff*(.8+.2*factor),maintenance=BASE.maintenance*(.7+.3*factor),airport=BASE.airport*factor,other=BASE.other*(.6+.4*factor);
+ const ebitda=revenue-fuel-staff-maintenance-airport-BASE.operatingLease-other+BASE.otherIncome;
+ const cash=ebitda-obligation;
+ const fuelCeiling=BASE.fuelUSD*(revenue-(fixed+variable*factor)-obligation)/(BASE.fuel*factor);
+ const fuelCeilingRefinanced=fuelCeiling+BASE.fuelUSD*CASH.principal/(BASE.fuel*factor);
+ const contribution=BASE.revenue-variable-BASE.fuel*price/BASE.fuelUSD;
+ const breakRevenue=contribution>0?BASE.revenue*(fixed+obligation)/contribution:null;
+ return {price,revenue,factor,fuel,staff,maintenance,airport,other,ebitda,cash,fuelCeiling,breakRevenue,refinanced:cash+CASH.principal,fuelCeilingRefinanced};
+}
+const fm=(b,withSign=false)=> (b<0?'−':withSign?'+':'')+'RM'+Math.round(Math.abs(b)*1000).toLocaleString('en-MY')+'M';
+const fmt=(v)=>'RM'+v.toFixed(2)+'B';
+const n=(v)=>Math.round(v*1000).toLocaleString('en-MY');
+function text(id,value){$(id).textContent=value}
+function amount(id,v){text(id,(v<0?'−':'')+n(Math.abs(v)));}
+function chart(revenue,price){
+ const el=$('plot'),W=900,H=300,m={l:76,r:22,t:15,b:44};
+ const points=[];for(let p=20;p<=220;p+=2)points.push({p,c:calc(p,revenue).cash});
+ const minY=Math.min(0,...points.map(p=>p.c)),maxY=Math.max(0,...points.map(p=>p.c));
+ const pad=(maxY-minY)*.12||.3,lo=minY-pad,hi=maxY+pad;
+ const X=p=>m.l+(p-20)/200*(W-m.l-m.r);const Y=c=>H-m.b-(c-lo)/(hi-lo)*(H-m.t-m.b);
+ const esc=v=>v.toFixed(1);let s='';
+ const ticks=4;for(let i=0;i<=ticks;i++){const val=lo+(hi-lo)*i/ticks;const y=Y(val);s+=`<line class="gridline" x1="${m.l}" y1="${esc(y)}" x2="${W-m.r}" y2="${esc(y)}"/><text x="${m.l-9}" y="${esc(y+4)}" text-anchor="end">${val.toFixed(1)}B</text>`;}
+ for(let p=20;p<=220;p+=40){s+=`<text x="${X(p)}" y="${H-13}" text-anchor="middle">$${p}</text>`;}
+ s+=`<line class="zero" x1="${m.l}" y1="${Y(0)}" x2="${W-m.r}" y2="${Y(0)}"/>`;
+ s+=`<polyline class="path" points="${points.map(p=>X(p.p)+','+Y(p.c)).join(' ')}"/>`;
+ const d=calc(price,revenue);s+=`<circle class="point" cx="${X(price)}" cy="${Y(d.cash)}" r="7"/>`;
+ s+=`<text x="${W/2}" y="${H-1}" text-anchor="middle">Jet fuel price (US$/barrel)</text>`;
+ el.innerHTML=s;
+ el.setAttribute('aria-label',`Quarterly net cash ${fm(d.cash)}, at jet fuel ${price} US dollars per barrel and revenue ${fmt(revenue)}`);
+}
+function update(){
+ const price=Number($('fuel').value),revenue=Number($('revenue').value);
+ const m=calc(price,revenue);
+ $('fuel').style.setProperty('--progress',(price-20)/2+'%');$('revenue').style.setProperty('--progress',(revenue-2)/6*100+'%');
+ text('fuelValue',`US$${price}/bbl`);text('revenueValue',fmt(revenue));text('flightFactor',(m.factor*100).toFixed(1)+'%');text('fuelBill',fmt(m.fuel));
+ text('netCash',fm(m.cash));$('netCash').className='value '+(m.cash<0?'neg':'pos');text('status',m.cash<0?'Cash shortfall':'Cash surplus');$('status').className='status'+(m.cash<0?' negative':'');
+ text('breakFuel',m.fuelCeiling<0?'Below US$0':`US$${m.fuelCeiling.toFixed(0)}`);
+ text('breakRevenue',m.breakRevenue===null?'Not attainable':fmt(m.breakRevenue));
+ text('ebitda',fm(m.ebitda));text('refinanced',fm(m.refinanced));text('refinancedFuel',m.fuelCeilingRefinanced<0?'No positive break-even fuel price':`Fuel ceiling: US$${m.fuelCeilingRefinanced.toFixed(0)}/bbl`);
+ const vals={tRev:revenue,tFuel:-m.fuel,tStaff:-m.staff,tMaintenance:-m.maintenance,tAirport:-m.airport,tOpLease:-BASE.operatingLease,tOther:-m.other,tOtherIncome:BASE.otherIncome,tEBITDA:m.ebitda,tInterest:-CASH.interest,tLeases:-CASH.lease,tPrincipal:-CASH.principal,tTax:-CASH.tax,tCapex:-CASH.capex,tNet:m.cash};
+ Object.entries(vals).forEach(([id,v])=>amount(id,v));$('tNet').className=m.cash>=0?'pos':'neg';
+ chart(revenue,price);
+}
+function init(){
+ const params=new URLSearchParams(location.search);
+ const f=Number(params.get('fuel')),r=Number(params.get('revenue'));
+ if(params.has('fuel')&&Number.isFinite(f))$('fuel').value=Math.round(Math.min(220,Math.max(20,f)));
+ if(params.has('revenue')&&Number.isFinite(r))$('revenue').value=(Math.round(Math.min(8,Math.max(2,r))*20)/20).toFixed(2);
+ ['fuel','revenue'].forEach(id=>$(id).addEventListener('input',()=>{text('shareStatus','');update()}));
+ $('reset').addEventListener('click',()=>{$('fuel').value=183;$('revenue').value=5.1;text('shareStatus','');update()});
+ $('share').addEventListener('click',async()=>{const url=new URL(location.href);url.searchParams.set('fuel',$('fuel').value);url.searchParams.set('revenue',Number($('revenue').value).toFixed(2));try{await navigator.clipboard.writeText(url.toString());text('shareStatus','Scenario link copied.')}catch(e){text('shareStatus','Copy this link from your address bar: '+url.toString());}});
+ update();
+}
+init();
+})();
+</script>
+</body></html>
